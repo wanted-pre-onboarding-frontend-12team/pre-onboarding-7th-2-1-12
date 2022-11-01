@@ -1,4 +1,6 @@
+import Router from './router';
+
 const App = () => {
-	return <div>App</div>;
+	return <Router />;
 };
 export default App;
