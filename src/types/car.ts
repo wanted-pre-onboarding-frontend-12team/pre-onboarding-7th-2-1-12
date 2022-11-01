@@ -28,3 +28,7 @@ export type Car = {
 	insurance?: Insurance[];
 	addtionalProduct?: AdditionalProduct[];
 };
+
+export type CarsReponseDto = {
+	payload: Car[];
+};
