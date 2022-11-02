@@ -2,19 +2,27 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import * as S from './styled';
-import { attributeDummyData } from '../../../constants/attributeDummyData';
+import { Attribute } from '../../../constants/attributeDummyData';
 import Chip from '../../shared/Chip';
-import React from 'react';
+import { Chip as ChipType } from '../../../recoil/atoms/ChipAtom';
+import React, { Dispatch, SetStateAction } from 'react';
 
-const Nav = () => {
+type Props = {
+	dummy: Attribute[];
+	perview: number;
+	setState: Dispatch<SetStateAction<ChipType>>;
+	state: ChipType;
+};
+
+const Nav = (props: Props) => {
 	return (
-		<S.StyledSwiper slidesPerView={5} initialSlide={0} spaceBetween={0} loopFillGroupWithBlank={true}>
-			{attributeDummyData &&
-				attributeDummyData.map((item) => {
+		<S.StyledSwiper slidesPerView={props.perview} initialSlide={0} spaceBetween={0} loopFillGroupWithBlank={true}>
+			{props.dummy &&
+				props.dummy.map((item) => {
 					return (
 						<React.Fragment key={item.value}>
 							<S.StyledSwiperSlide key={item.value}>
-								<Chip value={item.value} name={item.type}>
+								<Chip value={item.value} name={item.type} setState={props.setState} state={props.state}>
 									{item.name}
 								</Chip>
 							</S.StyledSwiperSlide>
