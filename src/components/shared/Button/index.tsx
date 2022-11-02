@@ -1,4 +1,15 @@
-export default function Button() {
-	const text = '예시 버튼';
-	return <button>{text}</button>;
-}
+import * as S from './styled';
+import { PropsWithChildren } from 'react';
+
+type Props = {
+	type: 'button' | 'submit';
+	disabled?: boolean;
+	active?: boolean;
+	onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+} & PropsWithChildren;
+
+const Button = ({ children, ...props }: Props) => {
+	return <S.Button {...props}>{children}</S.Button>;
+};
+
+export default Button;
