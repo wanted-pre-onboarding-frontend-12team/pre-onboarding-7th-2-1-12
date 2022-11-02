@@ -1,6 +1,4 @@
 import * as S from './styled';
-import Button from '../../components/shared/Button';
-import DetailForm from '../../components/feature/DetailForm';
 import Nav from '../../components/feature/Nav';
 import VehicleItem from '../../components/feature/VehicleItem';
 
