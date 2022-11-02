@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-	.DetailHeader {
+	.header {
 		padding: 0 20px;
 		background-color: ${({ theme }) => theme.colors.primary};
 		color: ${({ theme }) => theme.colors.white};
@@ -11,7 +11,7 @@ export const Container = styled.section`
 		display: flex;
 		align-items: center;
 	}
-	.DetailBody {
+	.body {
 		padding: 0 20px;
 		font-size: ${({ theme }) => theme.fontSizes.medium};
 		font-weight: ${({ theme }) => theme.fontWeights.normal};
