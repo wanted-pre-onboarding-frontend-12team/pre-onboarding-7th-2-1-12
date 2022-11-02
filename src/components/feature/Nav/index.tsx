@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 
 import * as S from './styled';
 
-export default function Nav() {
+const Nav = () => {
 	return (
 		<>
 			<S.StyledSwiper slidesPerView={5.5} initialSlide={0} spaceBetween={0} loopFillGroupWithBlank={true}>
@@ -20,4 +20,6 @@ export default function Nav() {
 			</S.StyledSwiper>
 		</>
 	);
-}
+};
+
+export default Nav;

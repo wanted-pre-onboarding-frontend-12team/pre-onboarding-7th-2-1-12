@@ -2,7 +2,7 @@ import * as S from './styled';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { AiOutlineArrowLeft } from 'react-icons/ai';
 
-export default function Header() {
+const Header = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
 	return (
@@ -17,4 +17,6 @@ export default function Header() {
 			)}
 		</S.HeaderContainer>
 	);
-}
+};
+
+export default Header;

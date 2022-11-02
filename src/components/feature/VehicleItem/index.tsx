@@ -2,7 +2,7 @@ import { Link, useParams } from 'react-router-dom';
 
 import * as S from './styled';
 
-export default function VehicleItem() {
+const VehicleItem = () => {
 	const { id } = useParams();
 	return (
 		<Link to={`/detail/${id}`} style={{ textDecoration: 'none' }}>
@@ -24,4 +24,6 @@ export default function VehicleItem() {
 			</S.Container>
 		</Link>
 	);
-}
+};
+
+export default VehicleItem;
