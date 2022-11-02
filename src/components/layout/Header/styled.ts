@@ -26,36 +26,6 @@ export const Header = styled.div`
 	.arrow {
 		left: 1.25rem;
 		position: absolute;
-		display: inline-block;
-		vertical-align: middle;
-		color: ${({ theme }) => theme.colors.black};
-		box-sizing: border-box;
 		cursor: pointer;
-		&:after,
-		&:before {
-			content: '';
-			box-sizing: border-box;
-		}
-		width: 14px;
-		height: 14px;
-		border-radius: 3px;
-		border-width: 3px 3px 0 0;
-		border-style: solid;
-
-		&:before {
-			right: 0;
-			top: -1.6px;
-			position: absolute;
-			height: 2.5px;
-			border-radius: 3px;
-			box-shadow: inset 0 0 0 32px;
-			transform: rotate(-45deg);
-			width: 16px;
-			transform-origin: right top;
-		}
-		&:after {
-			border-radius: 6px;
-		}
-		transform: rotate(-135deg);
 	}
 `;
