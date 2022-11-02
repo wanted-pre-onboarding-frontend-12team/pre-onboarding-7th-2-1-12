@@ -1,22 +1,33 @@
-import { PropsWithChildren } from 'react';
+import React, { PropsWithChildren, Dispatch, SetStateAction } from 'react';
 import * as S from './styled';
+import { Chip as ChipType } from '../../../recoil/atoms/ChipAtom';
 
 type Props = {
 	value: string;
 	name: string;
+	setState: Dispatch<SetStateAction<ChipType>>;
+	state: ChipType;
 } & PropsWithChildren;
 
 const Chip = ({ children, ...props }: Props) => {
-	let groupName = props.name;
-	if (props.name === 'fuelType' || props.name === 'segment') {
-		groupName = 'oneGroup';
-	}
+	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+		props.setState({ value: e.target.value, name: e.target.name, type: e.target.type });
+	};
 
 	return (
-		<S.Chip>
-			<S.Radio type="radio" id={props.value} value={props.value} name={groupName} />
-			<label htmlFor={props.value}>{children}</label>
-		</S.Chip>
+		<>
+			<S.Chip>
+				<S.Radio
+					type="radio"
+					id={props.value}
+					value={props.value}
+					name={props.name}
+					onChange={handleChange}
+					checked={props.state.value === props.value}
+				/>
+				<label htmlFor={props.value}>{children}</label>
+			</S.Chip>
+		</>
 	);
 };
 
