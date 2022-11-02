@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-	padding: 0 20px;
 	.cheap {
 		font-weight: ${({ theme }) => theme.fontWeights.bold};
 		font-size: ${({ theme }) => theme.fontSizes.normal};
