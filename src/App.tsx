@@ -1,10 +1,13 @@
 import Layout from './components/layout';
 import Router from './router';
+import ErrorBoundary from './pages/ErrorPage/ErrorBoundary';
 
 const App = () => {
 	return (
 		<Layout>
-			<Router />
+			<ErrorBoundary>
+				<Router />
+			</ErrorBoundary>
 		</Layout>
 	);
 };

@@ -5,6 +5,7 @@ import back_icon from '../../../assets/images/back_icon.svg';
 const Header = () => {
 	const location = useLocation();
 	const navigate = useNavigate();
+	if (window.location.pathname === '/*') return null;
 	return (
 		<S.HeaderContainer>
 			{location.pathname === '/' ? (
