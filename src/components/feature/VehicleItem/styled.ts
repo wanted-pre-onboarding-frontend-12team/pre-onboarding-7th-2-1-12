@@ -48,3 +48,17 @@ export const Img = styled.div`
 		z-index: 2;
 	}
 `;
+
+export const NewChip = styled.p`
+	font-weight: ${({ theme }) => theme.fontWeights.bold};
+	font-size: ${({ theme }) => theme.fontSizes.normal};
+	background-color: ${({ theme }) => theme.colors.primary};
+	color: ${({ theme }) => theme.colors.white};
+	width: 52px;
+	height: 22px;
+	border-radius: 42px;
+	font-size: ${({ theme }) => theme.fontSizes.small};
+	display: flex;
+	justify-content: center;
+	align-items: center;
+`;

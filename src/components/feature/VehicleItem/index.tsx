@@ -20,7 +20,7 @@ const VehicleItem = () => {
 				</S.Information>
 				<S.Img>
 					<Image imgUrl={imgUrl} />
-					<p>신규</p>
+					<S.NewChip>신규</S.NewChip>
 				</S.Img>
 			</S.Container>
 		</Link>
