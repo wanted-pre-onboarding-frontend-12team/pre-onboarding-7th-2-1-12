@@ -40,9 +40,8 @@ export const Img = styled.div`
 	display: flex;
 	position: relative;
 	border: 1px solid black;
-	> img {
-		width: 152px;
-	}
+	width: 152px;
+	height: 80px;
 	> p {
 		position: absolute;
 		right: 0;

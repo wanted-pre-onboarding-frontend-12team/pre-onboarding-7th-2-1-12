@@ -2,12 +2,11 @@ import styled from 'styled-components';
 
 interface ImgType {
 	imgUrl: string;
-	isDetailImg: boolean;
 }
 
 export const ImageItem = styled.div<ImgType>`
-	width: ${({ isDetailImg }) => (isDetailImg ? `100%` : `152px`)};
-	height: ${({ isDetailImg }) => (isDetailImg ? `205px` : `80px`)};
+	width: 100%;
+	height: 100%;
 	background-image: url(${({ imgUrl }) => imgUrl});
 	background-position: center;
 	background-size: cover;

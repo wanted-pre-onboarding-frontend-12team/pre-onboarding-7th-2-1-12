@@ -1,7 +1,12 @@
 import styled from 'styled-components';
 
 export const CarDetailWrap = styled.div`
-	background-color: aliceblue;
+	margin-top: 80px;
+`;
+
+export const ImgWrap = styled.div`
+	width: 100%;
+	height: 205px;
 `;
 
 export const CarDetailTitle = styled.div`
