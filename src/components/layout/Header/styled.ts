@@ -1,9 +1,34 @@
 import styled from 'styled-components';
 
+export const HeaderContainer = styled.header`
+	display: flex;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 1px solid black;
+	font-size: ${({ theme }) => theme.fontSizes.medium};
+	font-weight: ${({ theme }) => theme.fontWeights.bold};
+	height: 5rem;
+	background-color: ${({ theme }) => theme.colors.white};
+	z-index: 50;
+	max-width: ${({ theme }) => theme.maxWidth};
+`;
+
 export const Header = styled.div`
-	position: absolute;
-	width: 390px;
-	height: 60px;
-	left: 37px;
-	top: 421px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+
+	.arrow {
+		position: absolute;
+		left: 0;
+		font-size: ${({ theme }) => theme.fontSizes.large};
+		stroke: 'black';
+		stroke-width: 40;
+		cursor: pointer;
+	}
 `;
