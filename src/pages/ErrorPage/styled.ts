@@ -12,7 +12,10 @@ export const ErrorText = styled.p`
 	font-size: ${({ theme }) => theme.fontSizes.medium};
 	font-weight: ${({ theme }) => theme.fontWeights.bold};
 `;
-export const ErrorBtn = styled.button`
+export const ErrorBtn = styled.a`
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100px;
 	height: 30px;
 	border-radius: 12px;
@@ -20,4 +23,5 @@ export const ErrorBtn = styled.button`
 	color: ${({ theme }) => theme.colors.white};
 	background-color: ${({ theme }) => theme.colors.primary};
 	font-size: ${({ theme }) => theme.fontSizes.normal};
+	text-decoration: none;
 `;
