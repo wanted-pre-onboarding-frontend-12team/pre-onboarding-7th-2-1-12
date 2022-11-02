@@ -5,7 +5,7 @@ type attribute = {
 };
 
 export const attributeDummyData: attribute[] = [
-	{ value: '', name: '전체', type: 'Segment' },
+	{ value: 'ALL', name: '전체', type: 'Segment' },
 	{ value: 'C', name: '소형', type: 'Segment' },
 	{ value: 'D', name: '중형', type: 'Segment' },
 	{ value: 'E', name: '대형', type: 'Segment' },
