@@ -39,7 +39,6 @@ export const Segment = styled.div`
 export const Img = styled.div`
 	display: flex;
 	position: relative;
-	border: 1px solid black;
 	width: 152px;
 	height: 80px;
 	> p {
