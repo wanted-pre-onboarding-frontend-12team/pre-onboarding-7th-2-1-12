@@ -11,7 +11,7 @@ export const StyledSwiper = styled(Swiper)`
 
 export const StyledSwiperSlide = styled(SwiperSlide)`
 	display: flex;
-	width: 80%;
+	width: 100%;
 	align-items: center;
 	justify-content: center;
 `;
