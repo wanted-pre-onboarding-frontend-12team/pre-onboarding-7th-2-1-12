@@ -8,7 +8,7 @@ type Props = {
 
 const Chip = ({ children, ...props }: Props) => {
 	let groupName = props.name;
-	if (props.name === 'fuelType' || props.name === 'attribute') {
+	if (props.name === 'fuelType' || props.name === 'segment') {
 		groupName = 'oneGroup';
 	}
 
