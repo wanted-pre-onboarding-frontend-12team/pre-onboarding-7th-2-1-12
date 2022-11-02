@@ -3,8 +3,8 @@ import { DefaultTheme } from 'styled-components';
 const pixelToRem = (size: number) => `${size / 16}rem`;
 
 export const size = {
-	mobile: 450,
-	desktop: 1280,
+	mobile: 360,
+	desktop: 450,
 };
 
 const theme: DefaultTheme = {
