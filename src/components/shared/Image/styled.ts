@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 interface ImgType {
-	isDetailImg: boolean;
 	imgUrl: string;
+	isDetailImg: boolean;
 }
 
 export const ImageItem = styled.div<ImgType>`

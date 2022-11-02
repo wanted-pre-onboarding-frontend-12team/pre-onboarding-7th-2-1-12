@@ -1,7 +1,10 @@
 import { ImageItem } from './styled';
 
-export default function Image({}) {
-	const isDetailImg: boolean = true;
-	const imgUrl: string = `https://blog.kakaocdn.net/dn/cFpDPS/btrmhg2fPGD/bNvrWQKWTuLzDmA0PcID8k/img.png`;
+interface ImgType {
+	imgUrl: string;
+	isDetailImg: boolean;
+}
+
+export default function Image({ isDetailImg, imgUrl }: ImgType) {
 	return <ImageItem isDetailImg={isDetailImg} imgUrl={imgUrl} />;
 }
