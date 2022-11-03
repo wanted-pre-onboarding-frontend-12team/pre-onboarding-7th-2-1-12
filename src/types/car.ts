@@ -15,7 +15,7 @@ export type Attribute = {
 	brand: string;
 	name: string;
 	segment: Segment;
-	fuel: Fuel;
+	fuelType: Fuel;
 	imageUrl: string;
 };
 
