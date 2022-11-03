@@ -1,5 +1,7 @@
 // Shared Components
 export { default as Image } from '@src/components/shared/Image';
+export { default as StatusContent } from '@src/components/shared/StatusContent';
+export { default as SEOMetaTag } from '@src/components/shared/SEOMetaTag';
 
 // Layout Components
 export { default as Layout } from '@src/components/layout';

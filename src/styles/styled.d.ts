@@ -2,6 +2,7 @@ import 'styled-components';
 
 declare module 'styled-components' {
 	export interface DefaultTheme {
+		minWidth: string;
 		maxWidth: string;
 		fontSizes: {
 			small: string;
