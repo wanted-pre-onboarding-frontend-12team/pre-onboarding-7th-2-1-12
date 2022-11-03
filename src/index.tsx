@@ -16,15 +16,6 @@ const queryClient = new QueryClient({
 	},
 });
 
-const queryClient = new QueryClient({
-	defaultOptions: {
-		queries: {
-			retry: 1,
-			useErrorBoundary: true,
-		},
-	},
-});
-
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
 		<BrowserRouter>
