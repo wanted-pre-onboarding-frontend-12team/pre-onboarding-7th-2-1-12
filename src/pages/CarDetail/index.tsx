@@ -8,7 +8,11 @@ import SEOMetaTag from '../../components/shared/SEOMetaTag';
 
 const CarDetail = () => {
 	const { id } = useParams<{ id: string }>();
-	const { car } = useCar(id as string);
+	const { car, isLoading } = useCar(id as string);
+
+	if (car === undefined && isLoading === false) {
+		throw new Error('Not implemented.');
+	}
 
 	return (
 		<S.CarDetailWrap>

@@ -9,5 +9,6 @@ export const ImageItem = styled.div<ImgType>`
 	height: 100%;
 	background-image: url(${({ imgUrl }) => imgUrl});
 	background-position: center;
-	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
 `;

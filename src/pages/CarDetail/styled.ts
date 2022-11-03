@@ -8,7 +8,7 @@ export const CarDetailWrap = styled.div`
 
 export const ImgWrap = styled.div`
 	width: 100%;
-	height: 205px;
+	height: 300px;
 `;
 
 export const CarDetailTitle = styled.div`
