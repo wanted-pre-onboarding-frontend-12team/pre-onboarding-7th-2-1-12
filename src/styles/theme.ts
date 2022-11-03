@@ -4,11 +4,11 @@ const pixelToRem = (size: number) => `${size / 16}rem`;
 
 export const size = {
 	mobile: 450,
-	desktop: 1280,
 };
 
 const theme: DefaultTheme = {
-	maxWidth: pixelToRem(size.desktop),
+	minWidth: pixelToRem(360),
+	maxWidth: pixelToRem(size.mobile),
 	fontSizes: {
 		small: pixelToRem(12),
 		normal: pixelToRem(14),
@@ -28,7 +28,7 @@ const theme: DefaultTheme = {
 		primary: '#0094ff',
 	},
 	device: {
-		mobile: `screen and (max-width: ${size.mobile}px)`,
+		mobile: `screen and (min-width: ${size.mobile}px)`,
 	},
 };
 

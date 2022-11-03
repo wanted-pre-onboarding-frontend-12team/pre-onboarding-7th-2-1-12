@@ -23,6 +23,9 @@
 		"@typescript-eslint/explicit-function-return-type": "off",
 		"@typescript-eslint/triple-slash-reference": "off",
 		"react/react-in-jsx-scope": "off",
-		"no-var": "error"
+		"no-var": "error",
+		"no-unused-vars": "error",
+		"eqeqeq": "error",
+		"no-console": "warn"
 	}
 }
