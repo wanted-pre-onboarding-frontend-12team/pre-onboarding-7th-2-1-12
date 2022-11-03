@@ -11,7 +11,7 @@ type Props = {
 const MetaTag = (props: Props) => {
 	return (
 		<Helmet>
-			<title>알티모빌리티 - 차량대여 서비스</title>
+			<title>{props.title ? props.title : '알티모빌리티 - 차량대여 서비스'}</title>
 			<meta
 				name="description"
 				content={props.description ? props.description : '알티모빌리티 - 차량대여 서비스'}
