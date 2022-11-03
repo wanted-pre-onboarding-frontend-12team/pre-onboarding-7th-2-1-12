@@ -74,7 +74,90 @@ yarn run build
 ## 레포지토리 구조(src)
 
 ```jsx
-
+📦src
+ ┣ 📂apis
+ ┃ ┣ 📜car.ts
+ ┃ ┗ 📜requester.ts
+ ┣ 📂assets
+ ┃ ┗ 📂images
+ ┃ ┃ ┗ 📜back_icon.svg
+ ┣ 📂components
+ ┃ ┣ 📂feature
+ ┃ ┃ ┣ 📂CarListItem
+ ┃ ┃ ┃ ┣ 📜index.tsx
+ ┃ ┃ ┃ ┗ 📜styled.ts
+ ┃ ┃ ┣ 📂DetailForm
+ ┃ ┃ ┃ ┣ 📜index.tsx
+ ┃ ┃ ┃ ┗ 📜styled.ts
+ ┃ ┃ ┣ 📂FormBody
+ ┃ ┃ ┃ ┣ 📜index.tsx
+ ┃ ┃ ┃ ┗ 📜styled.ts
+ ┃ ┃ ┣ 📂FormHeader
+ ┃ ┃ ┃ ┣ 📜index.tsx
+ ┃ ┃ ┃ ┗ 📜styled.ts
+ ┃ ┃ ┣ 📂Nav
+ ┃ ┃ ┃ ┣ 📜index.tsx
+ ┃ ┃ ┃ ┗ 📜styled.ts
+ ┃ ┃ ┗ 📂VehicleItem
+ ┃ ┃ ┃ ┗ 📜index.tsx
+ ┃ ┣ 📂layout
+ ┃ ┃ ┣ 📂Header
+ ┃ ┃ ┃ ┣ 📜index.tsx
+ ┃ ┃ ┃ ┗ 📜styled.ts
+ ┃ ┃ ┣ 📜index.tsx
+ ┃ ┃ ┗ 📜styled.ts
+ ┃ ┣ 📂shared
+ ┃ ┃ ┣ 📂Chip
+ ┃ ┃ ┃ ┣ 📜index.tsx
+ ┃ ┃ ┃ ┗ 📜styled.ts
+ ┃ ┃ ┣ 📂Image
+ ┃ ┃ ┃ ┣ 📜index.tsx
+ ┃ ┃ ┃ ┗ 📜styled.ts
+ ┃ ┃ ┣ 📂SEOMetaTag
+ ┃ ┃ ┃ ┗ 📜index.tsx
+ ┃ ┃ ┗ 📂StatusContent
+ ┃ ┃ ┃ ┣ 📜index.tsx
+ ┃ ┃ ┃ ┗ 📜styled.ts
+ ┃ ┗ 📜index.ts
+ ┣ 📂constants
+ ┃ ┣ 📜api.ts
+ ┃ ┣ 📜attributeDummyData.ts
+ ┃ ┗ 📜car.ts
+ ┣ 📂hooks
+ ┃ ┣ 📜useCar.ts
+ ┃ ┗ 📜useCars.ts
+ ┣ 📂pages
+ ┃ ┣ 📂CarDetail
+ ┃ ┃ ┣ 📜index.tsx
+ ┃ ┃ ┗ 📜styled.ts
+ ┃ ┣ 📂CarList
+ ┃ ┃ ┣ 📜index.tsx
+ ┃ ┃ ┗ 📜styled.ts
+ ┃ ┣ 📂ErrorPage
+ ┃ ┃ ┣ 📜ErrorBoundary.tsx
+ ┃ ┃ ┣ 📜index.tsx
+ ┃ ┃ ┗ 📜styled.ts
+ ┃ ┗ 📜index.ts
+ ┣ 📂recoil
+ ┃ ┗ 📂atoms
+ ┃ ┃ ┗ 📜ChipAtom.tsx
+ ┣ 📂router
+ ┃ ┣ 📜index.tsx
+ ┃ ┗ 📜routePath.ts
+ ┣ 📂styles
+ ┃ ┣ 📜GlobalStyle.tsx
+ ┃ ┣ 📜index.ts
+ ┃ ┣ 📜styled.d.ts
+ ┃ ┗ 📜theme.ts
+ ┣ 📂types
+ ┃ ┗ 📜car.ts
+ ┣ 📂utils
+ ┃ ┣ 📜ArrayUtils.ts
+ ┃ ┣ 📜DateUtils.ts
+ ┃ ┗ 📜StringUtils.ts
+ ┣ 📜App.tsx
+ ┣ 📜index.tsx
+ ┗ 📜vite-env.d.ts
 ```
 
 ## 기술 스택
