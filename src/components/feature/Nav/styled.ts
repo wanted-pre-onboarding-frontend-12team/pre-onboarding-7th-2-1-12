@@ -4,7 +4,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 export const StyledSwiper = styled(Swiper)`
 	display: flex;
 	width: 100%;
-	margin-top: 5rem;
 	height: 2.5rem;
 	border-bottom: 1px solid black;
 `;

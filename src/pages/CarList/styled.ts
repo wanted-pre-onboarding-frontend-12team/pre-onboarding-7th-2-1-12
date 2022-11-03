@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
+	height: calc(100vh-5rem);
+	margin-top: 5rem;
 	.cheap {
 		font-weight: ${({ theme }) => theme.fontWeights.bold};
 		font-size: ${({ theme }) => theme.fontSizes.normal};
@@ -27,7 +29,7 @@ export const Container = styled.section`
 export const Message = styled.div`
 	font-weight: ${({ theme }) => theme.fontWeights.bold};
 	font-size: ${({ theme }) => theme.fontSizes.medium};
-	height: 100vh;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
