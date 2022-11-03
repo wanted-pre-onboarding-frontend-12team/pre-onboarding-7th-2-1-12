@@ -15,7 +15,7 @@ const CarDetail = () => {
 			{car && (
 				<>
 					<SEOMetaTag
-						title={car.attribute.brand + car.attribute.name}
+						title={`${car.attribute.brand} ${car.attribute.name}`}
 						description={`월 ${car.amount} 원`}
 						imgsrc={car.attribute.imageUrl}
 						url={`https://www.npmjs.com/package/react-helmet-async`}
