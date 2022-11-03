@@ -3,14 +3,15 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 export const StyledSwiper = styled(Swiper)`
 	display: flex;
-	width: 100%;
-	height: 2.5rem;
+	width: auto;
+	height: 39px;
 	border-bottom: 1px solid black;
+	padding-left: 12px;
 `;
 
 export const StyledSwiperSlide = styled(SwiperSlide)`
 	display: flex;
-	width: 100%;
+	width: auto;
 	align-items: center;
 	justify-content: center;
 `;

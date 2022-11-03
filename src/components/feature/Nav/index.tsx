@@ -9,14 +9,13 @@ import React, { Dispatch, SetStateAction } from 'react';
 
 type Props = {
 	dummy: Attribute[];
-	perview: number;
 	setState: Dispatch<SetStateAction<ChipType>>;
 	state: ChipType;
 };
 
 const Nav = (props: Props) => {
 	return (
-		<S.StyledSwiper slidesPerView={props.perview} initialSlide={0} spaceBetween={0} loopFillGroupWithBlank={true}>
+		<S.StyledSwiper slidesPerView="auto" initialSlide={0} spaceBetween={8} loopFillGroupWithBlank={true}>
 			{props.dummy &&
 				props.dummy.map((item) => {
 					return (
