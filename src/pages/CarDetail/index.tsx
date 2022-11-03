@@ -12,14 +12,14 @@ const CarDetail = () => {
 
 	return (
 		<S.CarDetailWrap>
-			<SEOMetaTag
-				title={car.attribute.brand + car.attribute.name}
-				description={`월 ${car.amount} 원`}
-				imgsrc={car.attribute.imageUrl}
-				url={`https://www.npmjs.com/package/react-helmet-async`}
-			/>
 			{car && (
 				<>
+					<SEOMetaTag
+						title={car.attribute.brand + car.attribute.name}
+						description={`월 ${car.amount} 원`}
+						imgsrc={car.attribute.imageUrl}
+						url={`https://www.npmjs.com/package/react-helmet-async`}
+					/>
 					<S.ImgWrap>
 						<Image imgUrl={car.attribute.imageUrl} />
 					</S.ImgWrap>

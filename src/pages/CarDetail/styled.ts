@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const CarDetailWrap = styled.div`
 	height: calc(100vh-60px);
 	margin-top: 60px;
+	overflow-y: auto;
 `;
 
 export const ImgWrap = styled.div`
