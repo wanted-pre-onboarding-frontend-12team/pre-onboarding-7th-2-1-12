@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
-	height: calc(100vh-5rem);
-	margin-top: 5rem;
+	height: calc(100vh-60px);
+	margin-top: 60px;
 	.cheap {
 		font-weight: ${({ theme }) => theme.fontWeights.bold};
 		font-size: ${({ theme }) => theme.fontSizes.normal};
