@@ -8,6 +8,8 @@ import useCars from '@src/hooks/useCars';
 
 const CarList = () => {
 	const { cars, isLoading, isEmtpy } = useCars();
+	const [segmentInfo, setSegmentInfo] = useRecoilState(SegmentAtom);
+	const [fuelTypeInfo, setFuelTypeInfo] = useRecoilState(fuelTypeAtom);
 
 	return (
 		<S.Container>
