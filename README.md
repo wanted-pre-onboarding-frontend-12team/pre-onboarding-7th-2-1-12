@@ -44,7 +44,7 @@ yarn run build
 
 ## 12팀이 동료학습으로 협업하는 방식
 
-1. [Convention Rule]() 을 정하고, 모든 팀원이 실천합니다.
+1. Convention Rule을 정하고, 모든 팀원이 실천합니다.
 
 2. 게더 타운에서 만나요~
 
@@ -58,7 +58,7 @@ yarn run build
 
 - 피그잼에 모여서 UI를 고민하는 팀과 데이터를 고민하는 팀으로 나누어서 계획을 짜고, 다시 모여서 함께 짧은 시간동안 완성해야하는 작업을 나눴습니다. 피그잼과 피그마로 함께 만들 소프트웨어를 기획했습니다. 작업을 시작했습니다~
 
-[피그잼에서 고민한 내용 보러가기](https://www.figma.com/file/imDU0VKds37F3eM4tdbgjc/Assignment-3---%EC%95%8C%ED%8B%B0%EB%AA%A8%EB%B9%8C%EB%A6%AC%ED%8B%B0?node-id=23%3A234)  
+[피그잼에서 고민한 내용 보러가기](https://www.figma.com/file/imDU0VKds37F3eM4tdbgjc/Assignment-3---%EC%95%8C%ED%8B%B0%EB%AA%A8%EB%B9%8C%EB%A6%AC%ED%8B%B0?node-id=0%3A1)  
 [피그마에서 기획한 내용 보러가기](https://www.figma.com/file/c91jQRLuanBMFRE9ztbXcz/Assignment-3---%EC%95%8C%ED%8B%B0%EB%AA%A8%EB%B9%8C%EB%A6%AC%ED%8B%B0?node-id=0%3A1)
 
 <br />
@@ -67,7 +67,24 @@ yarn run build
 
 ### 필수 요구 사항
 
-- [x] 이슈 목록 및 상세 화면 기능 구현
+- [x] Figma 상의 디자인 및 기능 구현
+  - [x] segment, fuelType은 받아온 데이터를 치환해서 사용
+  - [x] 차량 생성일로부터 1일 이내일 경우 "신규" 표시
+  - [x] 좌우 슬라이드 카테고리
+  - [x] 카테고리를 누르면 segment에 맞는 차량만 표시
+  - [x] 컴포넌트를 클릭 시 차량 상세 페이지 이동
+- [x] 차량 리스트
+- [x] 차량이 없을 때 처리
+- [x] 차량 불러오는 중 처리
+- [x] 차량 상세
+
+### 추가 구현 사항
+
+- [x] SEO
+  - 카카오톡, 페이스북에 공유 시 아래의 내용이 미리보기로 노출되도록 해야 함
+    - 제목: car.brand + car.name
+    - 내용: 월 car.amount 원
+    - 사진: 차량 사진
 
 <br />
 
