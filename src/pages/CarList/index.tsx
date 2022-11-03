@@ -13,8 +13,8 @@ const CarList = () => {
 
 	return (
 		<S.Container>
-			<Nav dummy={segmentDummyData} perview={4.4} state={segmentInfo} setState={setSegmentInfo} />
-			<Nav dummy={fuelTypeDummyData} perview={4} state={fuelTypeInfo} setState={setFuelTypeInfo} />
+			<Nav dummy={segmentDummyData} state={segmentInfo} setState={setSegmentInfo} />
+			<Nav dummy={fuelTypeDummyData} state={fuelTypeInfo} setState={setFuelTypeInfo} />
 			{isLoading && <S.Message>불러오는 중</S.Message>}
 			{isEmtpy ? <S.Message>차량이 없습니다.</S.Message> : cars?.map((car) => <CarListItem key={car.id} car={car} />)}
 		</S.Container>
