@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-export const Container = styled.section`
+export const Container = styled.div`
+	position: relative;
 	height: calc(100vh-60px);
 	margin-top: 60px;
 	.cheap {
@@ -28,11 +29,10 @@ export const Container = styled.section`
 	}
 `;
 
-export const Message = styled.div`
-	font-weight: ${({ theme }) => theme.fontWeights.bold};
-	font-size: ${({ theme }) => theme.fontSizes.medium};
-
+export const CarListScrollInnerWrapper = styled.ul`
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	flex-direction: column;
+	min-height: calc(100vh - 138px);
+	max-height: calc(100vh - 138px);
+	overflow-y: scroll;
 `;
