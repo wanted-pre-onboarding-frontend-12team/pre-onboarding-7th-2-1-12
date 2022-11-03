@@ -1,9 +1,22 @@
 import styled from 'styled-components';
 
 export const CarDetailWrap = styled.div`
-	height: calc(100vh-60px);
+	height: calc(100vh - 60px);
+	max-height: calc(100vh - 60px);
 	margin-top: 60px;
+
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 	overflow-y: auto;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+
+	@media ${({ theme }) => theme.device.mobile} {
+		border-right: 1px solid ${({ theme }) => theme.colors.gray};
+		border-left: 1px solid ${({ theme }) => theme.colors.gray};
+	}
 `;
 
 export const ImgWrap = styled.div`

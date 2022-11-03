@@ -10,7 +10,7 @@
 
 ## 데모 링크
 
-[🚀 GO TO DEMO]()
+[🚀 GO TO DEMO](https://zesty-panda-9c4cf6.netlify.app/)
 
 <br />
 
@@ -86,13 +86,28 @@ yarn run build
     - 내용: 월 car.amount 원
     - 사진: 차량 사진
 
+
 `디스코드 OG`
 
 ![image](https://user-images.githubusercontent.com/40523487/199823154-b63595e6-d824-49bf-8061-02a7025be7a5.png)
 
 ![image](https://user-images.githubusercontent.com/40523487/199823299-2ed2348c-3367-4483-8ddc-e6bf20152a50.png)
 
-<br/>
+<br />
+
+- [x] 슬라이드 카테고리
+  - api 요청 url에 fueltype과 segment 두가지로 api 요청이 가능한 것을 파악
+  - Figma 상의 디자인에는 segment 카테고리만 구현
+  - fuletype segment 데이터 두개를 사용해 api 요청을 하기 위해 카테고리를 분리 필요
+  - 검색기능 세분화를 통한 UX 개선을 목표로 카테고리 분리를 선택
+
+`슬라이드 구현`
+
+<img width="442" alt="스크린샷 2022-11-04 오전 5 11 59" src="https://user-images.githubusercontent.com/108744804/199824611-60afeea8-9922-4951-97e3-0be48517feb8.png">
+
+
+<br />
+
 
 ## 레포지토리 구조(src)
 
@@ -118,11 +133,9 @@ yarn run build
  ┃ ┃ ┣ 📂FormHeader
  ┃ ┃ ┃ ┣ 📜index.tsx
  ┃ ┃ ┃ ┗ 📜styled.ts
- ┃ ┃ ┣ 📂Nav
+ ┃ ┃ ┗ 📂Nav
  ┃ ┃ ┃ ┣ 📜index.tsx
  ┃ ┃ ┃ ┗ 📜styled.ts
- ┃ ┃ ┗ 📂VehicleItem
- ┃ ┃ ┃ ┗ 📜index.tsx
  ┃ ┣ 📂layout
  ┃ ┃ ┣ 📂Header
  ┃ ┃ ┃ ┣ 📜index.tsx
