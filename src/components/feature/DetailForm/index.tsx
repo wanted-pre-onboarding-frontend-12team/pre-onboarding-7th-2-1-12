@@ -20,8 +20,8 @@ const DetailForm = ({ car }: { car: Car }) => {
 			{car.insurance && (
 				<>
 					<FormHeader headerName={'보험'} />
-					{car.insurance.map((insure: { name: string; description: string }) => (
-						<FormBody key={insure.name} name={insure.name} description={insure.description} />
+					{car.insurance.map((insurance: { name: string; description: string }) => (
+						<FormBody key={insurance.name} name={insurance.name} description={insurance.description} />
 					))}
 				</>
 			)}
