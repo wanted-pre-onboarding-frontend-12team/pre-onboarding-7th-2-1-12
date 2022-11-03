@@ -1,4 +1,4 @@
-export type Fuel = 'gasoline' | 'hybrid' | 'ev' | 'hybrid';
+export type Fuel = 'gasoline' | 'hybrid' | 'ev';
 export type Segment = 'C' | 'D' | 'E' | 'SUV';
 
 export type Insurance = {
@@ -15,7 +15,7 @@ export type Attribute = {
 	brand: string;
 	name: string;
 	segment: Segment;
-	fuel: Fuel;
+	fuelType: Fuel;
 	imageUrl: string;
 };
 
