@@ -22,7 +22,7 @@ const CarDetail = () => {
 						title={`${car.attribute.brand} ${car.attribute.name}`}
 						description={`월 ${car.amount} 원`}
 						imgsrc={car.attribute.imageUrl}
-						url={`https://www.npmjs.com/package/react-helmet-async`}
+						url="https://zesty-panda-9c4cf6.netlify.app"
 					/>
 					<S.ImgWrap>
 						<Image imgUrl={car.attribute.imageUrl} />
