@@ -10,10 +10,12 @@ export const Container = styled.section`
 		height: 27px;
 		border-radius: 62px;
 	}
+
 	.active {
 		background-color: ${({ theme }) => theme.colors.black};
 		color: ${({ theme }) => theme.colors.white};
 	}
+
 	.new {
 		background-color: ${({ theme }) => theme.colors.primary};
 		color: ${({ theme }) => theme.colors.white};
