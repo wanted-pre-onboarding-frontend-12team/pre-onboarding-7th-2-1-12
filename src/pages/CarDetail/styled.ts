@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 export const CarDetailWrap = styled.div`
-	margin-top: 80px;
+	height: calc(100vh-60px);
+	margin-top: 60px;
 `;
 
 export const ImgWrap = styled.div`
