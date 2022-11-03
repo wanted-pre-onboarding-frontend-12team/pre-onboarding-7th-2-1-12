@@ -27,6 +27,11 @@ export const Container = styled.div`
 		border-radius: 42px;
 		font-size: ${({ theme }) => theme.fontSizes.small};
 	}
+
+	@media ${({ theme }) => theme.device.mobile} {
+		border-right: 1px solid ${({ theme }) => theme.colors.gray};
+		border-left: 1px solid ${({ theme }) => theme.colors.gray};
+	}
 `;
 
 export const CarListScrollInnerWrapper = styled.ul`
@@ -34,5 +39,12 @@ export const CarListScrollInnerWrapper = styled.ul`
 	flex-direction: column;
 	min-height: calc(100vh - 138px);
 	max-height: calc(100vh - 138px);
-	overflow-y: scroll;
+
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	overflow-y: auto;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
 `;
