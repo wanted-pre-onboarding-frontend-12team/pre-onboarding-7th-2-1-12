@@ -5,6 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
 import App from './App';
 import { GlobalStyle, theme } from './styles';
+import { RecoilRoot } from 'recoil';
 
 const queryClient = new QueryClient({
 	defaultOptions: {
@@ -20,8 +21,10 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 		<BrowserRouter>
 			<QueryClientProvider client={queryClient}>
 				<ThemeProvider theme={theme}>
+				 <RecoilRoot>
 					<GlobalStyle />
 					<App />
+         </RecoilRoot>
 				</ThemeProvider>
 			</QueryClientProvider>
 		</BrowserRouter>
