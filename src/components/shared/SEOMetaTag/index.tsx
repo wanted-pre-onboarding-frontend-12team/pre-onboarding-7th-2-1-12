@@ -21,7 +21,7 @@ const MetaTag = (props: Props) => {
 			<meta property="og:type" content="website" />
 			<meta property="og:title" content={props.title ? props.title : '알티모빌리티 - 차량대여 서비스'} />
 			<meta property="og:site_name" content="알티모빌리티 - 차량대여 서비스" />
-			<meta property="og:description" content={props.description ? props.description : '알티모빌리티 - 차량대여 서비스'} />
+			<meta property="og:description" content={props.description ? props.description : '세상과 사람, 자동차의 교집합'} />
 			<meta
 				property="og:image"
 				content={props.imgsrc ? props.imgsrc : 'https://static.wanted.co.kr/images/wdes/0_4.1efa9680.png'}
