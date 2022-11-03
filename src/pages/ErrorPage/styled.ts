@@ -2,16 +2,19 @@ import styled from 'styled-components';
 
 export const ErrorWrap = styled.div`
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	height: 90vh;
+	justify-content: center;
+	flex-direction: column;
+	height: calc(100vh - 60px);
+	margin-top: 60px;
 `;
+
 export const ErrorText = styled.p`
-	padding: 10px;
+	margin-bottom: 1.5em;
 	font-size: ${({ theme }) => theme.fontSizes.medium};
 	font-weight: ${({ theme }) => theme.fontWeights.bold};
 `;
+
 export const ErrorBtn = styled.a`
 	display: flex;
 	justify-content: center;
