@@ -6,7 +6,7 @@ export type Insurance = {
 	description: string;
 };
 
-export type AdditionalProduct = {
+export type AdditionalProducts = {
 	name: string;
 	amount: number;
 };
@@ -26,7 +26,7 @@ export type Car = {
 	startDate: string;
 	createdAt: string;
 	insurance?: Insurance[];
-	addtionalProduct?: AdditionalProduct[];
+	additionalProducts?: AdditionalProducts[];
 };
 
 export type CarsReponseDto = {
