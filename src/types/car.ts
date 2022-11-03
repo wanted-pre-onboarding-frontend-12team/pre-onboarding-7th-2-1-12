@@ -1,4 +1,4 @@
-export type Fuel = 'gasoline' | 'hybrid' | 'ev' | 'hybrid';
+export type Fuel = 'gasoline' | 'hybrid' | 'ev';
 export type Segment = 'C' | 'D' | 'E' | 'SUV';
 
 export type Insurance = {

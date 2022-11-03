@@ -13,6 +13,11 @@ const GlobalStyle = styled.createGlobalStyle`
 	body {
 		font-size: 16px;
 	}
+
+	ul,
+	li {
+		list-style: none;
+	}
 `;
 
 export default GlobalStyle;
