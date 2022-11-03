@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import { checkArray } from '../utils/checkArray';
+import { checkArray } from '../utils/ArrayUtils';
 import ROUTE_PATH from './routePath';
 import { CarList, CarDetail } from '../pages';
 

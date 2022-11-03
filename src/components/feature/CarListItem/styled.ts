@@ -1,12 +1,18 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-export const Container = styled.section`
+export const Container = styled.li`
+	list-style: none;
+`;
+
+export const SLink = styled(Link)`
 	display: flex;
 	width: 100%;
 	padding: 1.2rem;
 	border-bottom: 1px solid black;
 	justify-content: space-between;
 	height: 7.5rem;
+	text-decoration: none;
 	color: ${({ theme }) => theme.colors.black};
 `;
 
