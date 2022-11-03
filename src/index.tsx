@@ -8,15 +8,6 @@ import { GlobalStyle, theme } from './styles';
 import { RecoilRoot } from 'recoil';
 import { HelmetProvider } from 'react-helmet-async';
 
-const queryClient = new QueryClient({
-	defaultOptions: {
-		queries: {
-			retry: 1,
-			useErrorBoundary: true,
-		},
-	},
-});
-
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
 		<BrowserRouter>

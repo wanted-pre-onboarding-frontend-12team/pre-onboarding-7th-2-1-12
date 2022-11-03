@@ -1,27 +1,36 @@
+import { useMemo } from 'react';
 import { Car } from '@src/types/car';
 import * as S from './styled';
 import FormHeader from '../FormHeader';
 import FormBody from '../FormBody';
+import { getDay } from '@src/utils/DateUtils';
+import { carAttributeTable } from '@src/constants/car';
+import { numberWithCommasConverter } from '@src/utils/StringUtils';
 
 const DetailForm = ({ car }: { car: Car }) => {
+	const day = useMemo(() => getDay(car.startDate), []);
+
 	return (
 		<S.Container>
 			<FormHeader headerName={'차량정보'} />
-			<FormBody name={'차종'} description={car.attribute.segment} />
-			<FormBody name={'연료'} description={car.attribute.fuelType} />
-			<FormBody name={'이용가능일'} description={`${car.startDate}부터`} />
+			<FormBody name={'차종'} description={carAttributeTable.segmentTable[car.attribute.segment]} />
+			<FormBody name={'연료'} description={carAttributeTable.fuelTable[car.attribute.fuelType]} />
+			<FormBody name={'이용가능일'} description={`${day}부터`} />
 
 			{car.insurance && (
 				<>
 					<FormHeader headerName={'보험'} />
-					<FormBody name={'대인'} description={car.insurance[0].description} />
-					<FormBody name={'대물'} description={car.insurance[1].description} />
+					{car.insurance.map((insurance: { name: string; description: string }) => (
+						<FormBody key={insurance.name} name={insurance.name} description={insurance.description} />
+					))}
 				</>
 			)}
-			{car.addtionalProduct && (
+			{car.additionalProducts && (
 				<>
 					<FormHeader headerName={'추가상품'} />
-					<FormBody name={'대물'} description={`월 ${car.addtionalProduct[0].amount} 원`} />
+					{car.additionalProducts.map((product: { name: string; amount: number }) => (
+						<FormBody key={product.name} name={product.name} description={`월 ${numberWithCommasConverter(product.amount)} 원`} />
+					))}
 				</>
 			)}
 		</S.Container>
