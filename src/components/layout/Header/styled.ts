@@ -10,7 +10,7 @@ export const HeaderContainer = styled.header`
 	border-bottom: 1px solid black;
 	font-size: ${({ theme }) => theme.fontSizes.medium};
 	font-weight: ${({ theme }) => theme.fontWeights.bold};
-	height: 5rem;
+	height: 60px;
 	background-color: ${({ theme }) => theme.colors.white};
 	z-index: 50;
 	max-width: ${({ theme }) => theme.maxWidth};
