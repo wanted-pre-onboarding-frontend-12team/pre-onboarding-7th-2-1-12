@@ -23,7 +23,7 @@ const CarListItem = ({ car }: { car: Car }) => {
 				</S.Information>
 				<S.Img>
 					<Image imgUrl={car.attribute.imageUrl} />
-					<p>{isNewDate(car.createdAt) && '신규'}</p>
+					<S.NewChip>{isNewDate(car.createdAt) && '신규'}</S.NewChip>
 				</S.Img>
 			</S.SLink>
 		</S.Container>
