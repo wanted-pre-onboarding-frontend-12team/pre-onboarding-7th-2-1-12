@@ -2,7 +2,7 @@ import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 
 const createAxiosInstance = () => {
 	const base = axios.create({
-		baseURL: `https://preonboarding.platdev.net/api`,
+		baseURL: import.meta.env.VITE_BASE_API_URL,
 	});
 
 	return base;
