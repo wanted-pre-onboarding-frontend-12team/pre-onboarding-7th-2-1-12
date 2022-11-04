@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
-import { checkArray } from '../utils/ArrayUtils';
+import { CarList, CarDetail } from '@src/pages';
+import { checkArray } from '@src/utils/ArrayUtils';
 import ROUTE_PATH from './routePath';
-import { CarList, CarDetail } from '../pages';
 
 export default function Router() {
 	const routeList = [

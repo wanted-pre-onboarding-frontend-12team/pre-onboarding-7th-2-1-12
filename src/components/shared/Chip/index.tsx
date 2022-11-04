@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, Dispatch, SetStateAction } from 'react';
 import * as S from './styled';
-import { Chip as ChipType } from '../../../recoil/atoms/ChipAtom';
+import { Chip as ChipType } from '@src/recoil/atoms/ChipAtom';
 
 type Props = {
 	value: string;

@@ -1,6 +1,6 @@
 import { useRecoilState } from 'recoil';
-import * as S from './styled';
 import { CarListItem, StatusContent, Nav } from '@src/components';
+import * as S from './styled';
 import { SegmentAtom, fuelTypeAtom } from '@src/recoil/atoms/ChipAtom';
 import useCars from '@src/hooks/useCars';
 import { segmentDummyData, fuelTypeDummyData } from '@src/constants/attributeDummyData';

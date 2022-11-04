@@ -1,10 +1,9 @@
 import { useMemo } from 'react';
-import { Car } from '@src/types/car';
+import { FormHeader, FormBody } from '@src/components';
 import * as S from './styled';
-import FormHeader from '../FormHeader';
-import FormBody from '../FormBody';
-import { getDay } from '@src/utils/DateUtils';
+import { Car } from '@src/types/car';
 import { carAttributeTable } from '@src/constants/car';
+import { getDay } from '@src/utils/DateUtils';
 import { numberWithCommasConverter } from '@src/utils/StringUtils';
 
 const DetailForm = ({ car }: { car: Car }) => {

@@ -1,6 +1,6 @@
-import * as S from './styled';
 import { useLocation, useNavigate } from 'react-router-dom';
-import back_icon from '../../../assets/images/back_icon.svg';
+import * as S from './styled';
+import BackArrowIcon from '@src/assets/images/back_arrow.svg';
 
 const Header = () => {
 	const location = useLocation();
@@ -12,7 +12,7 @@ const Header = () => {
 				<S.Header>전체차량</S.Header>
 			) : (
 				<S.Header>
-					<img src={back_icon} onClick={() => navigate(-1)} className="arrow" />
+					<img src={BackArrowIcon} onClick={() => navigate(-1)} className="arrow" />
 					<p>차량상세</p>
 				</S.Header>
 			)}

@@ -1,11 +1,8 @@
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import * as S from './styled';
-import { Attribute } from '../../../constants/attributeDummyData';
-import Chip from '../../shared/Chip';
-import { Chip as ChipType } from '../../../recoil/atoms/ChipAtom';
 import React, { Dispatch, SetStateAction } from 'react';
+import Chip from '@src/components/shared/Chip';
+import * as S from './styled';
+import { Chip as ChipType } from '@src/recoil/atoms/ChipAtom';
+import { Attribute } from '@src/constants/attributeDummyData';
 
 type Props = {
 	dummy: Attribute[];

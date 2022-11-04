@@ -1,6 +1,6 @@
+import Image from '@src/components/shared/Image';
 import * as S from './styled';
 import { Car } from '@src/types/car';
-import Image from '../../shared/Image';
 import { carAttributeTable } from '@src/constants/car';
 import { isNewDate } from '@src/utils/DateUtils';
 import { numberWithCommasConverter } from '@src/utils/StringUtils';
