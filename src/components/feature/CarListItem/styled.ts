@@ -22,6 +22,7 @@ export const Information = styled.div`
 	justify-content: space-between;
 	line-height: 1.05rem;
 `;
+
 export const Brand = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -36,6 +37,7 @@ export const Brand = styled.div`
 export const Segment = styled.div`
 	display: flex;
 	flex-direction: column;
+	margin-top: auto;
 
 	> span {
 		font-size: ${({ theme }) => theme.fontSizes.small};

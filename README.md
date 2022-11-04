@@ -86,7 +86,6 @@ yarn run build
     - 내용: 월 car.amount 원
     - 사진: 차량 사진
 
-
 `디스코드 OG`
 
 ![image](https://user-images.githubusercontent.com/40523487/199823154-b63595e6-d824-49bf-8061-02a7025be7a5.png)
@@ -105,9 +104,7 @@ yarn run build
 
 <img width="442" alt="스크린샷 2022-11-04 오전 5 11 59" src="https://user-images.githubusercontent.com/108744804/199824611-60afeea8-9922-4951-97e3-0be48517feb8.png">
 
-
 <br />
-
 
 ## 레포지토리 구조(src)
 

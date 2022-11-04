@@ -16,17 +16,15 @@ const Chip = ({ children, ...props }: Props) => {
 
 	return (
 		<>
-			<S.Chip>
-				<S.Radio
-					type="radio"
-					id={props.value}
-					value={props.value}
-					name={props.name}
-					onChange={handleChange}
-					checked={props.state.value === props.value}
-				/>
-				<label htmlFor={props.value}>{children}</label>
-			</S.Chip>
+			<S.Radio
+				type="radio"
+				id={props.value}
+				value={props.value}
+				name={props.name}
+				onChange={handleChange}
+				checked={props.state.value === props.value}
+			/>
+			<label htmlFor={props.value}>{children}</label>
 		</>
 	);
 };

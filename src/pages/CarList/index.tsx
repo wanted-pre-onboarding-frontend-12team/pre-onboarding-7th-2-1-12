@@ -1,5 +1,5 @@
 import { useRecoilState } from 'recoil';
-import { CarListItem, StatusContent, Nav } from '@src/components';
+import { CarListItem, StatusContent, CarAttributeFilter } from '@src/components';
 import * as S from './styled';
 import { SegmentAtom, fuelTypeAtom } from '@src/recoil/atoms/ChipAtom';
 import useCars from '@src/hooks/useCars';
@@ -15,8 +15,8 @@ const CarList = () => {
 
 	return (
 		<S.Container>
-			<Nav dummy={segmentDummyData} state={segmentInfo} setState={setSegmentInfo} />
-			<Nav dummy={fuelTypeDummyData} state={fuelTypeInfo} setState={setFuelTypeInfo} />
+			<CarAttributeFilter attributes={segmentDummyData} state={segmentInfo} setState={setSegmentInfo} />
+			<CarAttributeFilter attributes={fuelTypeDummyData} state={fuelTypeInfo} setState={setFuelTypeInfo} />
 			<S.CarListScrollInnerWrapper>
 				{isLoading && <StatusContent>불러오는 중</StatusContent>}
 				{!isLoading && isEmtpy && <StatusContent>차량이 없습니다.</StatusContent>}

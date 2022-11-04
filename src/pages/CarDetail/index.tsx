@@ -2,9 +2,8 @@ import { useParams } from 'react-router-dom';
 import * as S from './styled';
 import Image from '../../components/shared/Image';
 import useCar from '@src/hooks/useCar';
-import { DetailForm } from '@src/components';
+import { SEO, DetailForm, CarName } from '@src/components';
 import { numberWithCommasConverter } from '@src/utils/StringUtils';
-import SEOMetaTag from '../../components/shared/SEOMetaTag';
 
 const CarDetail = () => {
 	const { id } = useParams<{ id: string }>();
@@ -18,20 +17,18 @@ const CarDetail = () => {
 		<S.CarDetailWrap>
 			{car && (
 				<>
-					<SEOMetaTag
+					<SEO
 						title={`${car.attribute.brand} ${car.attribute.name}`}
 						description={`월 ${car.amount} 원`}
 						imgsrc={car.attribute.imageUrl}
 						url="https://zesty-panda-9c4cf6.netlify.app"
 					/>
-					<S.ImgWrap>
+					<S.ImgaeWrapper>
 						<Image imgUrl={car.attribute.imageUrl} />
-					</S.ImgWrap>
-					<S.CarDetailTitle>
-						<S.BrandName>{car.attribute.brand}</S.BrandName>
-						<S.ModelName>{car.attribute.name}</S.ModelName>
+					</S.ImgaeWrapper>
+					<CarName brand={car.attribute.brand} name={car.attribute.name} usage="detail">
 						<S.MonthPrice>월 {numberWithCommasConverter(car.amount)} 원</S.MonthPrice>
-					</S.CarDetailTitle>
+					</CarName>
 					<DetailForm car={car} />
 				</>
 			)}
