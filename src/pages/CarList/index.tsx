@@ -5,6 +5,7 @@ import { segmentFilterAtom, fuelFilterAtom, defaultFilters } from '@src/recoil/a
 import useCars from '@src/hooks/useCars';
 import { segmentDummyData, fuelTypeDummyData } from '@src/constants/attributeDummyData';
 import { queryStringGenerator } from '@src/utils/StringUtils';
+import SkeletonCarList from '@src/components/skeleton/SkeletonCarList';
 
 const CarList = () => {
 	const [segmentFilter, setSegmentFilter] = useRecoilState(segmentFilterAtom);
@@ -21,7 +22,7 @@ const CarList = () => {
 			<CarAttributeFilter attributes={segmentDummyData} state={segmentFilter} setState={setSegmentFilter} />
 			<CarAttributeFilter attributes={fuelTypeDummyData} state={fuelFilter} setState={setFuelFilter} />
 			<S.CarListScrollInnerWrapper>
-				{isLoading && <StatusContent>불러오는 중</StatusContent>}
+				{isFetching && <SkeletonCarList />}
 				{!isLoading && isEmtpy && <StatusContent>차량이 없습니다.</StatusContent>}
 				{!isEmtpy && cars?.map((car) => <CarListItem key={car.id} car={car} />)}
 			</S.CarListScrollInnerWrapper>
