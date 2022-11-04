@@ -5,10 +5,11 @@ import useCar from '@src/hooks/useCar';
 import { DetailForm } from '@src/components';
 import { numberWithCommasConverter } from '@src/utils/StringUtils';
 import SEOMetaTag from '../../components/shared/SEOMetaTag';
+import { STALE_TIME } from '@src/constants/api';
 
 const CarDetail = () => {
 	const { id } = useParams<{ id: string }>();
-	const { car, isLoading } = useCar(id as string);
+	const { car, isLoading } = useCar(id as string, STALE_TIME);
 
 	if (car === undefined && isLoading === false) {
 		throw new Error('Not implemented.');
