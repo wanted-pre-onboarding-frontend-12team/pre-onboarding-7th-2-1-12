@@ -1,8 +1,7 @@
 import { useParams } from 'react-router-dom';
 import * as S from './styled';
-import Image from '../../components/shared/Image';
+import { SEO, DetailForm, CarName, ImageBackground } from '@src/components';
 import useCar from '@src/hooks/useCar';
-import { SEO, DetailForm, CarName } from '@src/components';
 import { numberWithCommasConverter } from '@src/utils/StringUtils';
 
 const CarDetail = () => {
@@ -23,9 +22,9 @@ const CarDetail = () => {
 						imgsrc={car.attribute.imageUrl}
 						url="https://zesty-panda-9c4cf6.netlify.app"
 					/>
-					<S.ImgaeWrapper>
-						<Image imgUrl={car.attribute.imageUrl} />
-					</S.ImgaeWrapper>
+					<S.ImgaeBackgroundWrapper>
+						<ImageBackground imgUrl={car.attribute.imageUrl} />
+					</S.ImgaeBackgroundWrapper>
 					<CarName brand={car.attribute.brand} name={car.attribute.name} usage="detail">
 						<S.MonthPrice>월 {numberWithCommasConverter(car.amount)} 원</S.MonthPrice>
 					</CarName>

@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-interface ImgType {
+type Container = {
 	imgUrl: string;
-}
+};
 
-export const ImageItem = styled.div<ImgType>`
+export const Container = styled.div<Container>`
 	width: 100%;
 	height: 100%;
 	background-image: url(${({ imgUrl }) => imgUrl});

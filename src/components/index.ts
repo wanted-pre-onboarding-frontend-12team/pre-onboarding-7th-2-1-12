@@ -1,5 +1,5 @@
 // Shared Components
-export { default as Image } from '@src/components/shared/Image';
+export { default as ImageBackground } from '@src/components/shared/ImageBackground';
 export { default as StatusContent } from '@src/components/shared/StatusContent';
 export { default as SEO } from '@src/components/shared/SEO';
 export { default as Chip } from '@src/components/shared/Chip';

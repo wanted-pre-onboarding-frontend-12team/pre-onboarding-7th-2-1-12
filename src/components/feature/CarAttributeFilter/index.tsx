@@ -1,20 +1,20 @@
 import { Dispatch, SetStateAction } from 'react';
 import Chip from '@src/components/shared/Chip';
 import * as S from './styled';
-import { Chip as ChipType } from '@src/recoil/atoms/ChipAtom';
+import { CarFilter } from '@src/recoil/atoms/carFilter';
 import { Attribute } from '@src/constants/attributeDummyData';
-import { checkArray } from '@src/utils/ArrayUtils';
+import { isValidArray } from '@src/utils/ArrayUtils';
 
 type Props = {
 	attributes: Attribute[];
-	setState: Dispatch<SetStateAction<ChipType>>;
-	state: ChipType;
+	setState: Dispatch<SetStateAction<CarFilter>>;
+	state: CarFilter;
 };
 
 const CarAttributeFilter = (props: Props) => {
 	return (
 		<S.StyledSwiper slidesPerView="auto" initialSlide={0} spaceBetween={8} loopFillGroupWithBlank={true}>
-			{checkArray(props.attributes) &&
+			{isValidArray(props.attributes) &&
 				props.attributes.map((attribute) => {
 					return (
 						<S.StyledSwiperSlide key={attribute.value}>

@@ -1,12 +1,12 @@
 import React, { PropsWithChildren, Dispatch, SetStateAction } from 'react';
 import * as S from './styled';
-import { Chip as ChipType } from '@src/recoil/atoms/ChipAtom';
+import { CarFilter } from '@src/recoil/atoms/carFilter';
 
 type Props = {
 	value: string;
 	name: string;
-	setState: Dispatch<SetStateAction<ChipType>>;
-	state: ChipType;
+	setState: Dispatch<SetStateAction<CarFilter>>;
+	state: CarFilter;
 } & PropsWithChildren;
 
 const Chip = ({ children, ...props }: Props) => {
