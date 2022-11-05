@@ -12,7 +12,7 @@ import { useRef } from 'react';
 const CarList = () => {
 	const [segmentFilter, setSegmentFilter] = useRecoilState(segmentFilterAtom);
 	const [fuelFilter, setFuelFilter] = useRecoilState(fuelFilterAtom);
-	const { cars, isLoading, isEmtpy } = useCars(
+	const { cars, isLoading, isEmtpy, isFetching } = useCars(
 		queryStringGenerator({ fuelType: fuelFilter.value, segment: segmentFilter.value }, [
 			defaultFilters.FUEL,
 			defaultFilters.SEGMENT,
