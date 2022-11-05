@@ -7,7 +7,7 @@ type Props = {
 	url?: string;
 };
 
-const MetaTag = (props: Props) => {
+const SEO = (props: Props) => {
 	return (
 		<Helmet>
 			<title>{props.title ? props.title : '알티모빌리티 - 차량대여 서비스'}</title>
@@ -40,4 +40,4 @@ const MetaTag = (props: Props) => {
 	);
 };
 
-export default MetaTag;
+export default SEO;

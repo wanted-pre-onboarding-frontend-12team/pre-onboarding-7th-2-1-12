@@ -1,12 +1,11 @@
-import Layout from './components/layout';
-import Router from './router';
-import ErrorBoundary from './pages/ErrorPage/ErrorBoundary';
-import SEOMetaTag from './components/shared/SEOMetaTag';
+import Router from '@src/router';
+import { Layout, SEO } from '@src/components';
+import { ErrorBoundary } from '@src/pages';
 
 const App = () => {
 	return (
 		<Layout>
-			<SEOMetaTag />
+			<SEO />
 			<ErrorBoundary>
 				<Router />
 			</ErrorBoundary>

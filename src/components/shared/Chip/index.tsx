@@ -1,12 +1,12 @@
 import React, { PropsWithChildren, Dispatch, SetStateAction } from 'react';
 import * as S from './styled';
-import { Chip as ChipType } from '../../../recoil/atoms/ChipAtom';
+import { CarFilter } from '@src/recoil/atoms/carFilter';
 
 type Props = {
 	value: string;
 	name: string;
-	setState: Dispatch<SetStateAction<ChipType>>;
-	state: ChipType;
+	setState: Dispatch<SetStateAction<CarFilter>>;
+	state: CarFilter;
 } & PropsWithChildren;
 
 const Chip = ({ children, ...props }: Props) => {
@@ -16,17 +16,15 @@ const Chip = ({ children, ...props }: Props) => {
 
 	return (
 		<>
-			<S.Chip>
-				<S.Radio
-					type="radio"
-					id={props.value}
-					value={props.value}
-					name={props.name}
-					onChange={handleChange}
-					checked={props.state.value === props.value}
-				/>
-				<label htmlFor={props.value}>{children}</label>
-			</S.Chip>
+			<S.Radio
+				type="radio"
+				id={props.value}
+				value={props.value}
+				name={props.name}
+				onChange={handleChange}
+				checked={props.state.value === props.value}
+			/>
+			<label htmlFor={props.value}>{children}</label>
 		</>
 	);
 };

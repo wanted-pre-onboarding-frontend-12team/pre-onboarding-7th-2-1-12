@@ -1,14 +1,13 @@
 import { useParams } from 'react-router-dom';
 import * as S from './styled';
-import Image from '../../components/shared/Image';
+import { SEO, DetailForm, CarName, ImageBackground } from '@src/components';
 import useCar from '@src/hooks/useCar';
-import { DetailForm } from '@src/components';
 import { numberWithCommasConverter } from '@src/utils/StringUtils';
-import SEOMetaTag from '../../components/shared/SEOMetaTag';
+import { STALE_TIME } from '@src/constants/api';
 
 const CarDetail = () => {
 	const { id } = useParams<{ id: string }>();
-	const { car, isLoading } = useCar(id as string);
+	const { car, isLoading } = useCar(id as string, STALE_TIME);
 
 	if (car === undefined && isLoading === false) {
 		throw new Error('Not implemented.');
@@ -18,20 +17,18 @@ const CarDetail = () => {
 		<S.CarDetailWrap>
 			{car && (
 				<>
-					<SEOMetaTag
+					<SEO
 						title={`${car.attribute.brand} ${car.attribute.name}`}
 						description={`월 ${car.amount} 원`}
 						imgsrc={car.attribute.imageUrl}
 						url="https://zesty-panda-9c4cf6.netlify.app"
 					/>
-					<S.ImgWrap>
-						<Image imgUrl={car.attribute.imageUrl} />
-					</S.ImgWrap>
-					<S.CarDetailTitle>
-						<S.BrandName>{car.attribute.brand}</S.BrandName>
-						<S.ModelName>{car.attribute.name}</S.ModelName>
+					<S.ImgaeBackgroundWrapper>
+						<ImageBackground imgUrl={car.attribute.imageUrl} />
+					</S.ImgaeBackgroundWrapper>
+					<CarName brand={car.attribute.brand} name={car.attribute.name} usage="detail">
 						<S.MonthPrice>월 {numberWithCommasConverter(car.amount)} 원</S.MonthPrice>
-					</S.CarDetailTitle>
+					</CarName>
 					<DetailForm car={car} />
 				</>
 			)}
