@@ -1,11 +1,11 @@
 import { useMemo } from 'react';
-import { Car } from '@src/types/car';
+import { FormHeader, FormBody } from '@src/components';
 import * as S from './styled';
-import FormHeader from '../FormHeader';
-import FormBody from '../FormBody';
-import { getDay } from '@src/utils/DateUtils';
+import { Car } from '@src/types/car';
 import { carAttributeTable } from '@src/constants/car';
+import { getDay } from '@src/utils/DateUtils';
 import { numberWithCommasConverter } from '@src/utils/StringUtils';
+import { isValidArray } from '@src/utils/ArrayUtils';
 
 const DetailForm = ({ car }: { car: Car }) => {
 	const day = useMemo(() => getDay(car.startDate), []);
@@ -17,18 +17,18 @@ const DetailForm = ({ car }: { car: Car }) => {
 			<FormBody name={'연료'} description={carAttributeTable.fuelTable[car.attribute.fuelType]} />
 			<FormBody name={'이용가능일'} description={`${day}부터`} />
 
-			{car.insurance && (
+			{isValidArray(car.insurance) && (
 				<>
 					<FormHeader headerName={'보험'} />
-					{car.insurance.map((insurance: { name: string; description: string }) => (
+					{car.insurance?.map((insurance: { name: string; description: string }) => (
 						<FormBody key={insurance.name} name={insurance.name} description={insurance.description} />
 					))}
 				</>
 			)}
-			{car.additionalProducts && (
+			{isValidArray(car.additionalProducts) && (
 				<>
 					<FormHeader headerName={'추가상품'} />
-					{car.additionalProducts.map((product: { name: string; amount: number }) => (
+					{car.additionalProducts?.map((product: { name: string; amount: number }) => (
 						<FormBody key={product.name} name={product.name} description={`월 ${numberWithCommasConverter(product.amount)} 원`} />
 					))}
 				</>

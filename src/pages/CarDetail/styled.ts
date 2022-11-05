@@ -19,8 +19,8 @@ export const CarDetailWrap = styled.div`
 	}
 `;
 
-export const ImgWrap = styled.div`
-	width: 100%;
+export const ImgaeBackgroundWrapper = styled.div`
+	width: auto;
 	height: 300px;
 `;
 
@@ -28,20 +28,8 @@ export const CarDetailTitle = styled.div`
 	padding: 20px;
 `;
 
-export const BrandName = styled.p`
-	color: ${({ theme }) => theme.colors.black};
-	font-size: ${({ theme }) => theme.fontSizes.large};
-	font-weight: ${({ theme }) => theme.fontWeights.bold};
-`;
-
-export const ModelName = styled.p`
-	padding-bottom: 34px;
-	color: ${({ theme }) => theme.colors.black};
-	font-size: ${({ theme }) => theme.fontSizes.big};
-	font-weight: ${({ theme }) => theme.fontWeights.bold};
-`;
-
 export const MonthPrice = styled.p`
+	padding-top: 34px;
 	text-align: right;
 	color: ${({ theme }) => theme.colors.black};
 	font-size: ${({ theme }) => theme.fontSizes.medium};

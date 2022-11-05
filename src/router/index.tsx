@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
-import { checkArray } from '../utils/ArrayUtils';
+import { CarList, CarDetail } from '@src/pages';
+import { isValidArray } from '@src/utils/ArrayUtils';
 import ROUTE_PATH from './routePath';
-import { CarList, CarDetail } from '../pages';
 
 export default function Router() {
 	const routeList = [
@@ -19,7 +19,7 @@ export default function Router() {
 
 	return (
 		<Routes>
-			{checkArray(routeList) &&
+			{isValidArray(routeList) &&
 				routeList.map(({ id, path, element }) => {
 					return <Route key={id} path={path} element={element} />;
 				})}

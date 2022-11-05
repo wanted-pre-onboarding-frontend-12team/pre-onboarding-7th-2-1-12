@@ -1,5 +1,8 @@
 import * as styled from 'styled-components';
 import reset from 'styled-reset';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import { size } from './theme';
 
 const GlobalStyle = styled.createGlobalStyle`

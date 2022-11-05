@@ -1,5 +1,5 @@
-import { getCars } from '@src/apis/car';
 import { useQuery } from '@tanstack/react-query';
+import { getCars } from '@src/apis/car';
 import { Car } from '@src/types/car';
 
 const useCar = (id: string, staleTime: number = 0) => {

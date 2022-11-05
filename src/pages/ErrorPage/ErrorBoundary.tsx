@@ -1,5 +1,4 @@
 import { Component, ReactNode } from 'react';
-
 import ErrorPage from '.';
 
 interface Props {
