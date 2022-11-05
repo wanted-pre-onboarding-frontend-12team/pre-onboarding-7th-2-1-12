@@ -5,3 +5,5 @@ export const PATH = {
 		index: '/cars',
 	},
 };
+
+export const STALE_TIME = 60000;
