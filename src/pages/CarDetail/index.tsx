@@ -3,10 +3,11 @@ import * as S from './styled';
 import { SEO, DetailForm, CarName, ImageBackground } from '@src/components';
 import useCar from '@src/hooks/useCar';
 import { numberWithCommasConverter } from '@src/utils/StringUtils';
+import { STALE_TIME } from '@src/constants/api';
 
 const CarDetail = () => {
 	const { id } = useParams<{ id: string }>();
-	const { car, isLoading } = useCar(id as string);
+	const { car, isLoading } = useCar(id as string, STALE_TIME);
 
 	if (car === undefined && isLoading === false) {
 		throw new Error('Not implemented.');

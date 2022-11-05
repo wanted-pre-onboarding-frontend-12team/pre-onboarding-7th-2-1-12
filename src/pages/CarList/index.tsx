@@ -6,6 +6,8 @@ import useCars from '@src/hooks/useCars';
 import { segmentDummyData, fuelTypeDummyData } from '@src/constants/attributeDummyData';
 import { queryStringGenerator } from '@src/utils/StringUtils';
 import SkeletonCarList from '@src/components/skeleton/SkeletonCarList';
+import ScrollButton from '@src/components/feature/ScrollButton';
+import { useRef } from 'react';
 
 const CarList = () => {
 	const [segmentFilter, setSegmentFilter] = useRecoilState(segmentFilterAtom);
@@ -16,16 +18,18 @@ const CarList = () => {
 			defaultFilters.SEGMENT,
 		]),
 	);
+	const scrollRef = useRef<HTMLUListElement>(null);
 
 	return (
 		<S.Container>
 			<CarAttributeFilter attributes={segmentDummyData} state={segmentFilter} setState={setSegmentFilter} />
 			<CarAttributeFilter attributes={fuelTypeDummyData} state={fuelFilter} setState={setFuelFilter} />
-			<S.CarListScrollInnerWrapper>
+			<S.CarListScrollInnerWrapper ref={scrollRef}>
 				{isFetching && <SkeletonCarList />}
 				{!isLoading && isEmtpy && <StatusContent>차량이 없습니다.</StatusContent>}
 				{!isEmtpy && cars?.map((car) => <CarListItem key={car.id} car={car} />)}
 			</S.CarListScrollInnerWrapper>
+			<ScrollButton scrollRef={scrollRef} />
 		</S.Container>
 	);
 };
